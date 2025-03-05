@@ -52,5 +52,3 @@ class Pizza:
         else:
             print("La base n'est pas valide")
 
-pizza = Pizza("name","ingr",10,"des","tomate")
-print(pizza.base)
