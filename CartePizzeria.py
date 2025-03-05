@@ -25,7 +25,25 @@ class CartePizzeria:
             self.desserts.append(element)
         else if isinstance(element, Pizza) :
             self.pizzas.append(element)
-
+            
+    def remove(self, name):
+        for pizza in self.pizzas:
+            if pizza.name == name:
+                self.pizzas.remove(pizza)
+                return
+            else :
+                for drink in self.drinks:
+                    if drink.name == name:
+                        self.drinks.remove(drink)
+                        return
+                    else :
+                        for dessert in self.desserts:
+                            if dessert.name == name:
+                                self.desserts.remove(dessert)
+                                return
+        raise CartePizzeriaException(name)
+    
+    
     def add_pizza(self, pizza):
         self.pizzas.append(pizza)
 
