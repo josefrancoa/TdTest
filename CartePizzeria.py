@@ -42,14 +42,4 @@ class CartePizzeria:
                                 self.desserts.remove(dessert)
                                 return
         raise CartePizzeriaException(name)
-    
-    
-    def add_pizza(self, pizza):
-        self.pizzas.append(pizza)
 
-    def remove_pizza(self, name):
-        for pizza in self.pizzas:
-            if pizza.name == name:
-                self.pizzas.remove(pizza)
-                return
-        raise CartePizzeriaException(name)
