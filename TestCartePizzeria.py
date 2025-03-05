@@ -17,6 +17,17 @@ def test_add_pizza():
 
     assert carte.nb_pizzas() == 1
     assert mock_pizza in carte.pizzas
+
+
+def test_remove_pizza():
+    carte = CartePizzeria()
+    mock_pizza = Mock()
+    mock_pizza.name = "Bolognaise"
+    carte.add_pizza(mock_pizza)
+    carte.remove_pizza("Bolognaise")
+
+    assert carte.nb_pizzas() == 0
+
     
 def test_nb_pizza():
     carte = CartePizzeria()
