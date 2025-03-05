@@ -42,3 +42,19 @@ def test_nb_pizza():
     mock_pizza2.name = "Peperoni"
     carte.add_pizza(mock_pizza2)
     assert carte.nb_pizzas() == 2
+
+
+def test_nb_drinks():
+    carte = CartePizzeria()
+    assert carte.nb_drinks() == 0
+
+    drink1 = Mock()
+    drink1.name = "Coca"
+    carte.add(drink1)
+    assert carte.nb_drinks() == 1
+
+    drink2 = Mock()
+    drink2.name = "Ice Tea"
+    carte.add(drink2)
+    assert carte.nb_drinks() == 2
+
