@@ -1,4 +1,7 @@
 import CartePizzeriaException
+from Pizza import Pizza
+from Boisson import Boisson
+from Dessert import Dessert
 
 class CartePizzeria:
     def __init__(self):
@@ -21,9 +24,9 @@ class CartePizzeria:
     def add(self, element):
         if isinstance(element, Boisson) :
             self.drinks.append(element)
-        else if isinstance(element, Dessert) :
+        elif isinstance(element, Dessert) :
             self.desserts.append(element)
-        else if isinstance(element, Pizza) :
+        elif isinstance(element, Pizza) :
             self.pizzas.append(element)
             
     def remove(self, name):
@@ -42,4 +45,3 @@ class CartePizzeria:
                                 self.desserts.remove(dessert)
                                 return
         raise CartePizzeriaException(name)
-
