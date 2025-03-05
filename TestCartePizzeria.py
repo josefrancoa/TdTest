@@ -4,7 +4,6 @@ from CartePizzeria import CartePizzeria
 
 def test_is_empty():
     cartePizzeria = CartePizzeria()
-    #cartePizzeria.pizzas = []
     assert cartePizzeria.is_empty() == True
 
 def test_add_pizza():
