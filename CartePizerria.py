@@ -18,4 +18,4 @@ class CartePizzeria:
             if pizza.name == name:
                 self.pizzas.remove(pizza)
                 return
-        raise CartePizzeriaException("La pizza n'existe pas")
+        raise CartePizzeriaException(name)
