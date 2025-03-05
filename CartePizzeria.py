@@ -10,10 +10,10 @@ class CartePizzeria:
         return len(self.pizzas) == 0
     
     def nb_pizzas(self):
-        return len(self.pizzas)
+        return len(self.pizzas) == 0
 
     def nb_desserts(self):
-        return len(self.desserts)
+        return len(self.desserts) == 0
 
     def nb_drinks(self)
         return len(self.drinks)
