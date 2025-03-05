@@ -35,12 +35,12 @@ def test_nb_pizza():
     
     mock_pizza1 = Mock()
     mock_pizza1.name = "Margherita"
-    carte.add_pizza(mock_pizza1)
+    carte.add(mock_pizza1)
     assert carte.nb_pizzas() == 1
     
     mock_pizza2 = Mock()
     mock_pizza2.name = "Peperoni"
-    carte.add_pizza(mock_pizza2)
+    carte.add(mock_pizza2)
     assert carte.nb_pizzas() == 2
 
 
