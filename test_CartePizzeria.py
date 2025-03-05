@@ -58,3 +58,17 @@ def test_nb_drinks():
     carte.add(drink2)
     assert carte.nb_drinks() == 2
 
+def test_add_desserts():
+    carte = CartePizzeria()
+    mock_dessert1 = Mock()
+    mock_dessert1.name = "Tiramisu"
+    mock_dessert2 = Mock()
+    mock_dessert2.name = "Flan"
+
+    carte.add(mock_dessert1)
+    carte.add(mock_dessert2)
+
+    assert carte.nb_desserts() == 2
+    assert mock_dessert1 in carte.desserts
+    assert mock_dessert2 in carte.desserts
+
