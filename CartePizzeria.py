@@ -15,9 +15,17 @@ class CartePizzeria:
     def nb_desserts(self):
         return len(self.desserts)
 
-    def nb_drinks(self)
+    def nb_drinks(self):
         return len(self.drinks)
     
+    def add(self, element):
+        if isinstance(element, Boisson) :
+            self.drinks.append(element)
+        else if isinstance(element, Dessert) :
+            self.desserts.append(element)
+        else if isinstance(element, Pizza) :
+            self.pizzas.append(element)
+
     def add_pizza(self, pizza):
         self.pizzas.append(pizza)
 
